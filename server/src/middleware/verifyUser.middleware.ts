@@ -12,7 +12,6 @@ export const verifyUser = (req: Request, res: Response, next: NextFunction) => {
     }
     else {
       req.user = <User>decoded;
-      console.log(req.user);
       next();
     }
   });

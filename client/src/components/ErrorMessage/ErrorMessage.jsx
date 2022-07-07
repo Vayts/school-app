@@ -6,6 +6,8 @@ export const ErrorMessage = ({ name }) => (
 	<ErrorWrapper>
 		<ErrorTextWrapper name={name}>
 			{(msg) => {
+				// eslint-disable-next-line no-console
+				console.log(msg);
 				return <ErrorText>{msg}</ErrorText>;
 			}}
 		</ErrorTextWrapper>
