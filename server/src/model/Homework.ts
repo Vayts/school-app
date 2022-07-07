@@ -10,11 +10,31 @@ const usefulLinksSchema = new Schema({
 		type: String,
 		required: true
 	}
+});
+
+const studentsAnswersSchema = new Schema({
+	studentId: {
+		type: Number,
+		required: true
+	},
+	studentName: {
+		type: String,
+		required: true,
+	},
+	message: {
+		 type: String,
+		 required: false,
+	},
+	links: [String]
 })
 
 
 const HomeworkSchema = new Schema({
 	title: {
+		type: String,
+		required: true,
+	},
+	teacherName: {
 		type: String,
 		required: true,
 	},
@@ -38,7 +58,16 @@ const HomeworkSchema = new Schema({
 		type: String,
 		required: false
 	},
-	usefulLinks: [usefulLinksSchema]
+	usefulLinks: {
+		type: [usefulLinksSchema],
+		required: true,
+		default: [],
+	},
+	studentsAnswers: {
+		type: [studentsAnswersSchema],
+		required: true,
+		default: [],
+	},
 })
 
 export const Homework = mongoose.model('Homework', HomeworkSchema)

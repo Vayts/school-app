@@ -14,7 +14,7 @@ export const getFilteredDeadlines = createSelector(
 	(deadlines, filter) => {
 		const nextDay = new Date().getTime() + (24 * 60 * 60 * 1000);
 		const nextDayStart = new Date(new Date(nextDay).setHours(0, 0, 0, 0)).getTime();
-		
+
 		switch (filter) {
 		case 'all': {
 			return deadlines;

@@ -61,9 +61,8 @@ export class StudentService {
 
         try {
           const timeZoneOffset = (new Date()).getTimezoneOffset() * 60000;
-          const currentDate = new Date((Date.now() + 24 * 60 * 60) - timeZoneOffset).toISOString().slice(0, 10).replace('T', ' ');
-
-          return Homework.find({classId: response[0].class_id || 0, deadline: {$gte: new Date(`${currentDate} 00:00:00`).toISOString()}}).sort({deadline: 1});
+          const currentDate = new Date((Date.now()) - timeZoneOffset).toISOString().slice(0, 19).replace('T', ' ');
+          return Homework.find({classId: response[0].class_id || 0, deadline: {$gte: new Date(`${currentDate}`).toISOString()}}).sort({deadline: 1});
         } catch (err) {
           return Promise.reject({code: 409, message: 'CONNECTION_ERROR'})
         }
@@ -138,3 +137,5 @@ export class StudentService {
   }
 
 }
+
+'2022-07-06T22:50:48.000+00:00'

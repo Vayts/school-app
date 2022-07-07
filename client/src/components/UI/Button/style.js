@@ -1,11 +1,11 @@
 import styled from 'styled-components';
 
 export const ButtonElem = styled.button`
-  padding: 10px 35px;
+  padding: ${({ primary }) => (primary ? '10px 25px' : '7px 15px')};
   color: ${({ isLoading }) => (isLoading ? 'transparent' : '#fff')};
   background-color: #2D5BFF;
-  font-size: ${({ primary }) => (primary ? '18px' : '16px')};
-  font-weight: 800;
+  font-size: ${({ primary }) => (primary ? '16px' : '14px')};
+  font-weight: 600;
   border: none;
   border-radius: 8px;
   text-align: center;

@@ -1,0 +1,1 @@
+export const HOMEWORK_MESSAGE_MAX_LENGTH = 400;

@@ -11,6 +11,7 @@ import { useDispatch } from 'react-redux';
 import { refreshUser } from '@store/auth/actions';
 import { Loader } from '@src/components/Loader/Loader';
 import { AppWrapper } from './style';
+import { Homework } from '@src/pages/Homework/Homework';
 
 function App() {
 	const [isLoading, setLoading] = useState(true);
@@ -28,10 +29,11 @@ function App() {
 				: (
 					<Routes>
 						<Route path='/' element={<Layout/>}>
-							{/*<Route index element={<Login/>}/>*/}
+							
 							<Route path='login' element={<Login/>}/>
 							<Route element={<RequireAuth/>}>
 								<Route index element={<Dashboard/>}/>
+								<Route path='homework' element={<Homework/>}/>
 							</Route>
 							<Route path='register' element={<Register/>}/>
 						</Route>

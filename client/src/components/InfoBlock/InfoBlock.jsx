@@ -5,6 +5,7 @@ import { Loader } from '@src/components/Loader/Loader';
 import { useAxiosPrivate } from '@src/hooks/useAxiosPrivate';
 import { useDispatch, useSelector } from 'react-redux';
 import { v4 as uuidv4 } from 'uuid';
+import moment from 'moment';
 import {
 	InfoBlockContent,
 	InfoBlockControlItem,
@@ -74,6 +75,7 @@ const InfoBlock = ({
 						: (
 							<InfoBlockList>
 								{filtered.map((el) => {
+									const date = moment(el[dateAttr]);
 									return (
 										<InfoBlockListItem key={el._id}>
 											<InfoBlockInfo>
@@ -90,8 +92,8 @@ const InfoBlock = ({
 												</InfoBlockMainInfo>
 											</InfoBlockInfo>
 											<InfoBlockDateWrapper>
-												<InfoBlockDate>{el[dateAttr].slice(5, 10).replace('T', ' ').replace('-', '.')}</InfoBlockDate>
-												<InfoBlockTime>{el[dateAttr].slice(10, 16).replace('T', ' ')}</InfoBlockTime>
+												<InfoBlockDate>{`${date.format('DD')}.${date.format('MM')}`}</InfoBlockDate>
+												<InfoBlockTime>{`${date.format('HH')}:${date.format('mm')}`}</InfoBlockTime>
 											</InfoBlockDateWrapper>
 										</InfoBlockListItem>
 									);

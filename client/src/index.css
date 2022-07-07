@@ -25,6 +25,21 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-close:before {
+  content: "\e910";
+  color: #7c7b7b;
+}
+
+.icon-upload:before {
+  content: "\e90f";
+  color: #7c7b7b;
+}
+
+.icon-homework-task:before {
+  content: "\e90e";
+  color: #7c7b7b;
+}
+
 .icon-exit:before {
   content: "\e90d";
   color: #7c7b7b;
@@ -96,6 +111,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #F8F8F8;
+
 }
 
 code {

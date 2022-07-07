@@ -36,7 +36,7 @@ const NavigationPanel = () => {
 				<hr/>
 				<NavigationLink to='/homework'>
 					<span className='icon-homework'/>
-					<NavigationLinkText>Homework</NavigationLinkText>
+					<NavigationLinkText>Homeworks</NavigationLinkText>
 				</NavigationLink>
 				<NavigationLink to='/settings'>
 					<span className='icon-settings'/>

@@ -67,10 +67,8 @@ export function eventsFetch(setLoading, controller, axiosPrivate) {
 			const response = await axiosPrivate.get('/student/events', {
 				signal: controller.signal,
 			});
-			setTimeout(() => {
-				dispatch(setEvents(response.data.value));
-				setLoading(false);
-			}, 1000);
+			dispatch(setEvents(response.data.value));
+			setLoading(false);
 		} catch (err) {
 			setLoading(false);
 		}
