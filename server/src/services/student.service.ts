@@ -3,7 +3,8 @@ import {MySQLService} from "./mySQL.service";
 import { Homework } from '../model/Homework';
 import moment from 'moment';
 import {generateWorkloadData} from "../helpers/studentWorkload.helper";
-
+import {AWSUploader} from "./bucket.service";
+import {S3File} from "../interfaces/S3File.interface";
 
 export class StudentService {
   
@@ -136,6 +137,12 @@ export class StudentService {
       })
   }
 
-}
+  sendStudentHomework(req: Request, res: Response) {
+    const s3 = new AWSUploader();
+    const files = <S3File[]><unknown>req.files;
+    s3.multiplyUpload(files).then((response) => {
+      console.log(response);
+    });
+  }
 
-'2022-07-06T22:50:48.000+00:00'
+}

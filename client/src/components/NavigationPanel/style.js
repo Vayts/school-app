@@ -10,6 +10,7 @@ export const NavigationPanelWrapper = styled.div`
   top: 0;
   bottom: 0;
 	display: inline-block;
+  box-shadow: 0 0 20px rgba(132, 132, 132, 0.2);
 
   hr {
 	  display: block;

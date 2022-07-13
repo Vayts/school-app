@@ -5,6 +5,7 @@
   "license": "MIT",
   "dependencies": {
     "@types/jsonwebtoken": "^8.5.8",
+    "aws-sdk": "^2.1173.0",
     "bcrypt": "^5.0.1",
     "bcryptjs": "2.4.3",
     "cookie-parser": "1.4.6",
@@ -17,6 +18,8 @@
     "moment": "^2.29.3",
     "moment-range": "^4.0.2",
     "mongoose": "^6.4.1",
+    "multer": "^1.4.5-lts.1",
+    "multiparty": "^4.2.3",
     "mysql2": "^2.3.3",
     "nodemon": "2.0.15",
     "rimraf": "3.0.2",
@@ -28,7 +31,8 @@
     "@types/cookie-parser": "1.4.2",
     "@types/cors": "2.8.12",
     "@types/express": "4.17.13",
-    "@types/mongoose": "^5.11.97"
+    "@types/mongoose": "^5.11.97",
+    "@types/multer": "^1.4.7"
   },
   "scripts": {
     "nodemon": "npx nodemon --files src/server.ts",

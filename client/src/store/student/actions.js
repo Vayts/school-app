@@ -151,3 +151,33 @@ function setStudentWorkload(data) {
 		payload: data,
 	};
 }
+
+// eslint-disable-next-line no-unused-vars
+export function sendStudentHomework(setLoading, controller, axiosPrivate, homeworkId, values) {
+	return async (dispatch) => {
+		const formData = new FormData();
+		values.files.forEach((el) => {
+			formData.append('file', el);
+		});
+		formData.append('message', values.message);
+		// eslint-disable-next-line no-console
+		// console.log(formData.getAll('message'));
+		// eslint-disable-next-line no-console
+		console.log(formData.getAll('file'));
+		setLoading(true);
+		try {
+			const response = await axiosPrivate.post(`/student/homework/${homeworkId}`, formData, {
+				headers: {
+					'Content-Type': 'multipart/form-data',
+				},
+				withCredentials: true,
+			});
+			// eslint-disable-next-line no-console
+			console.log(response);
+			dispatch();
+			// setLoading(false);
+		} catch (err) {
+			// setLoading(false);
+		}
+	};
+}

@@ -40,7 +40,7 @@ export class App {
       credentials: true,
       origin: ['http://localhost:4200']
     }));
-    this.app.use(express.urlencoded({ extended: true }));
+    this.app.use(express.urlencoded({ extended: false }));
     this.app.use(express.json());
     this.app.use(cookieParser());
   }

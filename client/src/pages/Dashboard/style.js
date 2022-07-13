@@ -1,14 +1,22 @@
 import styled from 'styled-components';
 
 export const DashboardWrapper = styled.div`
-	width: 100%;
+	max-width: 1250px;
+	width: 1250px;
+	height: 100vh;
+	overflow: hidden;
   display: flex;
 	justify-content: space-between;
+
+  @media (max-width: 1919px) {
+    max-width: 100%;
+    width: 100%;
+  }
 `;
 
 export const DashboardContent = styled.div`
 	flex-basis: 100%;
-	padding: 50px;
+	padding: 25px;
 	display: flex;
 	flex-direction: column;
   justify-content: space-between;
@@ -23,8 +31,6 @@ export const DashboardUpContent = styled.div`
 export const DashboardDownContent = styled.div`
 	flex-basis: 100%;
   display: flex;
-  flex-grow: 1;
-	flex-shrink: 1;
 	justify-content: space-between;
 `;
 

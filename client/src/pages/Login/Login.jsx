@@ -90,7 +90,7 @@ export const Login = () => {
 									validation={touched.password ? touched.password && errors.password ? 'error' : 'valid' : 'unTouched'}
 								/>
 								<ErrorMessage name='password'/>
-								<Button primary disabled={!(isValid && dirty)} type="submit" title="Sign in" isLoading={isLoading}>{isLoading ? <Loader color='#fff' size={14}/> : null}</Button>
+								<Button primary disabled={!(isValid && dirty)} type="submit" title="Sign in" isLoading={isLoading}/>
 							</LoginForm>
 						);
 					}}

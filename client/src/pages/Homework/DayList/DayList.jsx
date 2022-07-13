@@ -29,7 +29,7 @@ const DayList = ({ homeworks, setHomework }) => {
 	
 	const setHomeworkHandler = (item) => {
 		return () => {
-			setHomework({ open: true, subject: item.subject, title: item.title });
+			setHomework({ open: true, subject: item.subject, title: item.title, id: item._id });
 		};
 	};
 	

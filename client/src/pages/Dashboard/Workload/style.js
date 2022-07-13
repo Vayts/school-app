@@ -1,7 +1,8 @@
 import styled from 'styled-components';
 
 export const WorkloadWrapper = styled.div`
-  flex-basis: 67%;
+  width: 67%;
+	height: 100%;
   background-color: #ECF0FF;
   border-radius: 16px;
   position: relative;

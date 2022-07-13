@@ -51,4 +51,8 @@ export const HOMEWORK_EXTENSIONS = {
 		mime: 'video/mp4',
 		img: 'video.png',
 	},
+	mp3: {
+		mime: 'video/mp3',
+		img: 'video.png',
+	},
 };

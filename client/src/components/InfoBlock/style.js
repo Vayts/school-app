@@ -1,10 +1,10 @@
 import styled from 'styled-components';
 
 export const InfoBlockWrapper = styled.div`
+	height: 100%;
   background-color: #fff;
   padding: 25px 25px 0;
   flex-basis: 38%;
-  height: 100%;
   border-radius: 16px;
   box-shadow: 0 0 20px rgba(132, 132, 132, 0.2);
 `;
@@ -37,13 +37,12 @@ export const InfoBlockControlItem = styled.li`
 
 export const InfoBlockContent = styled.div`
   position: relative;
-  height: 300px;
+  height: 350px;
   width: 100%;
-
 `;
 
 export const InfoBlockList = styled.ul`
-  max-height: 300px;
+	height: 100%;
   overflow-y: scroll;
   list-style: none;
   margin: 0;

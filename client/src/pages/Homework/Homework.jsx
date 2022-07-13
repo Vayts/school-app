@@ -24,7 +24,7 @@ export const Homework = () => {
 	const homeworks = homeworkParser(deadlines);
 	const axiosPrivate = useAxiosPrivate();
 	const dispatch = useDispatch();
-	const [homework, setHomework] = useState({ open: false, subject: '', title: '' });
+	const [homework, setHomework] = useState({ open: false, subject: '', title: '', id: '' });
 	
 	useEffect(() => {
 		const controller = new AbortController();
